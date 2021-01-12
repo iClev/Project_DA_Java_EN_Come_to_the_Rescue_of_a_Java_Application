@@ -24,7 +24,6 @@ public class AnalyticsCounter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
 	}
 	public static void ecritureMap() throws IOException {
 		String  lectureSymptom = "";
