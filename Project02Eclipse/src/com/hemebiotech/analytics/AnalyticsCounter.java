@@ -8,8 +8,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class AnalyticsCounter {
-	public static void main(String args[]) throws Exception {
-		ArrayList<String> result = new ArrayList<>();
+	static ArrayList<String> result = new ArrayList<>();
+
+	public static void lectureMap() {
+
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader("Project02Eclipse\\symptoms.txt"));
 			String line = reader.readLine();
@@ -22,7 +24,9 @@ public class AnalyticsCounter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
+	}
+	public static void ecritureMap() throws IOException {
 		String  lectureSymptom = "";
 		int countSymptom = 0;
 		FileWriter writer = new FileWriter("results.out");
@@ -42,5 +46,12 @@ public class AnalyticsCounter {
 				lectureSymptom = newLine;
 			}
 		}	writer.close();
+	}
+
+	public static void main(String args[]) throws Exception {
+
+		lectureMap();
+		ecritureMap();
+
 	}
 }
