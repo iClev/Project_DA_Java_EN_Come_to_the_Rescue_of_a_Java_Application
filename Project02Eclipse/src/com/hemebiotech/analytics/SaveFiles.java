@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
+ * la class SavesFiles,
+ * écrit les nombres d'occurrences des symptômes dans un fichier.
+ *
  *@author Clévyd M.
  *@version 15.0.1
  */
