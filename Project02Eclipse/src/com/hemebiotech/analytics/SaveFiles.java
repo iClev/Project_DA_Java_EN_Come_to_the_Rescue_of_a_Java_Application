@@ -4,8 +4,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
+/**
+ *
+ */
 public class SaveFiles {
 
+    /**
+     * @param myMap
+     * @param fileNameInput
+     * @throws IOException
+     */
     public void Sauvegardes(Map<String, Integer> myMap, String fileNameInput) throws IOException {
 
         FileWriter writer = new FileWriter(fileNameInput);

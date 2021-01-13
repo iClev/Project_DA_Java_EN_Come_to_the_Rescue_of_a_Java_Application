@@ -20,6 +20,10 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		this.filepath = filepath;
 	}
 
+	/**
+	 * @return
+	 * @throws FileNotFoundException
+	 */
 	@Override
 
 	public TreeMap<String, Integer> lectureMap () throws FileNotFoundException {

@@ -5,10 +5,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+/**
+ *
+ */
 public class AppProperties {
+    /**
+     *
+     */
     private Properties appProps;
 
-    public AppProperties() throws IOException {
+    /**
+     */
+    public AppProperties() {
         String appConfigPath = System.getProperty("user.dir") + "\\Project02Eclipse\\app.properties";
         this.appProps = new Properties();
         try {
@@ -21,9 +29,17 @@ public class AppProperties {
             e.printStackTrace();
         }
     }
+
+    /**
+     * @return
+     */
     public String getPathInput(){
         return this.appProps.getProperty("path.input");
     }
+
+    /**
+     * @return
+     */
     public String getPathOutput(){
         return this.appProps.getProperty("path.output");
     }
