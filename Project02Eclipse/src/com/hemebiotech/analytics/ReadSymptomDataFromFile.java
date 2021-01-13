@@ -16,7 +16,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	private String filepath;
 	/**
 	 *
-	 * @param filepath a full or partial path to file with symptom strings in it, one per line
+	 * @param filepath un chemin d'accès complet ou partiel au fichier symptômes une par ligne
 	 */
 	public ReadSymptomDataFromFile (String filepath) {
 		this.filepath = filepath;
@@ -27,7 +27,16 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	 * @throws FileNotFoundException
 	 */
 	@Override
-
+	/**
+	 * Procedure sans type de retour
+	 *
+	 *
+	 * Count the occurrences of symptoms from a List, then add them in a tree map
+	 *
+	 * @return myMap, parcourrir une TreeMap contenant les occurences associées à chaque symptômes
+	 *
+	 * @throws FileNotFoundException  Le fichier n'existe pas.
+	 */
 	public TreeMap<String, Integer> lectureMap () throws FileNotFoundException {
 		BufferedReader reader = new BufferedReader(new FileReader(this.filepath));
 		TreeMap<String, Integer> myMap = new TreeMap<>();
