@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.util.TreeMap;
 
@@ -18,5 +17,5 @@ public interface ISymptomReader {
 	 * 
 	 * @return a raw listing of all Symptoms obtained from a data source, duplicates are possible/probable
 	 */
-	TreeMap<String, Integer> lectureMap (BufferedReader reader) throws FileNotFoundException;
+	TreeMap<String, Integer> lectureMap () throws FileNotFoundException;
 }
