@@ -6,7 +6,11 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
+ *  class AppProperties,
+ *  correspond au Fichier de gestion des properties
  *
+ * @author Clévyd M.
+ * @version 15.0.1
  */
 public class AppProperties {
     /**
@@ -15,6 +19,8 @@ public class AppProperties {
     private Properties appProps;
 
     /**
+     * Constructeur sans argument ou constructeur par défaut
+     * ne possède aucune valeur de retour (même pas void).
      */
     public AppProperties() {
         String appConfigPath = System.getProperty("user.dir") + "\\Project02Eclipse\\app.properties";
@@ -32,6 +38,7 @@ public class AppProperties {
 
     /**
      * @return
+     * {@link AppProperties#getPathInput()}
      */
     public String getPathInput(){
         return this.appProps.getProperty("path.input");
@@ -39,6 +46,7 @@ public class AppProperties {
 
     /**
      * @return
+     * {@link AppProperties#getPathOutput()}
      */
     public String getPathOutput(){
         return this.appProps.getProperty("path.output");

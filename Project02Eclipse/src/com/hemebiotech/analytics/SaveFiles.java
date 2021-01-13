@@ -5,7 +5,8 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- *
+ *@author Clévyd M.
+ *@version 15.0.1
  */
 public class SaveFiles {
 

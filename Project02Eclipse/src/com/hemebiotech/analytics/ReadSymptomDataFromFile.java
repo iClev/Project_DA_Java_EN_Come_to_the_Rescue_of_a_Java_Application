@@ -7,8 +7,10 @@ import java.io.IOException;
 import java.util.TreeMap;
 
 /**
- * Simple brute force implementation
+ * Simple implementation
  *
+ * @author Clévyd M.
+ * @version 15.0.1
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 	private String filepath;
