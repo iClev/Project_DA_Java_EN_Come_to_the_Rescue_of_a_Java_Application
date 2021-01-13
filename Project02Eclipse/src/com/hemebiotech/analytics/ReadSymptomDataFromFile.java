@@ -31,7 +31,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 			while (line != null) {
 				countSymptom = myMap.get(line) == null ? 0 : myMap.get(line);
 				countSymptom += 1;
-
 				myMap.put(line, countSymptom);
 				System.out.println("" + line);
 				line = reader.readLine();

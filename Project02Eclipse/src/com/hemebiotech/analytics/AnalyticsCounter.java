@@ -9,7 +9,12 @@ import java.util.Collections;
 
 public class AnalyticsCounter {
 	static ArrayList<String> result = new ArrayList<>();
+	public static void main(String args[]) throws Exception {
 
+		lectureMap();
+		ecritureMap();
+
+	}
 	public static void lectureMap() {
 
 		try {
@@ -47,10 +52,5 @@ public class AnalyticsCounter {
 		}	writer.close();
 	}
 
-	public static void main(String args[]) throws Exception {
 
-		lectureMap();
-		ecritureMap();
-
-	}
 }
