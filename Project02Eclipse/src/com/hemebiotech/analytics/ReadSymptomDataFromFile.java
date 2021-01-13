@@ -1,8 +1,6 @@
 package com.hemebiotech.analytics;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.TreeMap;
 
@@ -11,17 +9,18 @@ import java.util.TreeMap;
  *
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
-	private String filepath;
+	static String filepath;
 	/**
 	 *
 	 * @param filepath a full or partial path to file with symptom strings in it, one per line
 	 */
 	public ReadSymptomDataFromFile (String filepath) {
-		this.filepath = filepath;
+		ReadSymptomDataFromFile.filepath = filepath;
 	}
+
 	@Override
-	public TreeMap<String, Integer> lectureMap () throws FileNotFoundException {
-		BufferedReader reader = new BufferedReader(new FileReader(this.filepath));
+
+	public TreeMap<String, Integer> lectureMap (BufferedReader reader) {
 		TreeMap<String, Integer> myMap = new TreeMap<>();
 		String line ;
 		try {
@@ -38,7 +37,6 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 			System.out.println();
 		}catch (IOException e) {
 			e.printStackTrace();
-		}
-		return myMap;
+		}return myMap;
 	}
 }
